@@ -82,19 +82,19 @@ body {
 }
 
 .site-header a:hover { 
-  background: rgba(248, 228, 216, 0.15);
-  color: #BFACE2;
+  background: rgb(248, 228, 216);
+  color: #34024d;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(191, 172, 226, 0.3);
 }
 
 .site-header a:nth-child(odd):hover {
-  background: rgba(223, 182, 178, 0.2);
+  background: rgba(248, 228, 216);
   box-shadow: 0 4px 12px rgba(248, 228, 216, 0.3);
 }
 
 .site-header a:nth-child(even):hover {
-  background: rgba(191, 172, 226, 0.15);
+  background: rgb(248, 228, 216);;
 }
 
 .site-footer { 

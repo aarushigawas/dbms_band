@@ -12,7 +12,7 @@ require_once __DIR__ . '/../config.php';
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/band/index.php">BandMgmt</a>
+      <a class="brand" href="/band/index.php">BandSync</a>
       <nav>
         <a href="/band/pages/dashboard.php">Dashboard</a>
         <?php if (current_user_role()==='manager'): ?>

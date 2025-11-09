@@ -29,7 +29,7 @@
 
   <style>
     .site-footer {
-      background: linear-gradient(135deg, #F8E4D8 0%, #DFB6B2 50%, #BFACE2 100%);
+      background: rgba(215, 208, 163, 0.75);;
       color: #2B124C;
       padding: 50px 20px 30px;
       margin-top: 60px;
