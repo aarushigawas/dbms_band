@@ -13,7 +13,7 @@ BEGIN
     -- on error rollback and exit
     ROLLBACK;
   END;
-
+  
   START TRANSACTION;
     UPDATE bookings bk
     JOIN venues v ON v.venue_id = bk.venue_id
