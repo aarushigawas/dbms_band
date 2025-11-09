@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config.php';
 require_login();
 $role = current_user_role();
 if (!in_array($role, ['manager','venue_owner'])) {
-  header('Location: /band/pages/dashboard.php');
+  header('Location: ' . BASE_URL . '/pages/dashboard.php');
   exit;
 }
 

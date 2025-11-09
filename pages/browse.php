@@ -629,7 +629,7 @@ include __DIR__ . '/header.php';
                     <?=htmlspecialchars($r['performance_type'] ?: 'Concert')?>
                   </div>
                   <?php if (current_user_role()==='general'): ?>
-                    <a href="/band/pages/purchase.php?performance_id=<?=$r['performance_id']?>" class="btn">
+                    <a href="<?= BASE_URL ?>/pages/purchase.php?performance_id=<?=$r['performance_id']?>" class="btn">
                       <span>🎫 Get Tickets</span>
                     </a>
                   <?php endif; ?>
@@ -645,7 +645,7 @@ include __DIR__ . '/header.php';
           <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?q=80&w=400" alt="No performances">
           <h3>No Shows Available</h3>
           <p>There are no upcoming performances at the moment. Check back soon for exciting new shows and events!</p>
-          <a href="/band/pages/dashboard.php" class="explore-btn">Back to Dashboard</a>
+          <a href="<?= BASE_URL ?>/pages/dashboard.php" class="explore-btn">Back to Dashboard</a>
         </div>
       <?php endif; ?>
     </div>

@@ -16,6 +16,22 @@ try {
   die("DB connection failed: " . $e->getMessage());
 }
 
+// Compute BASE_URL dynamically from current directory relative to DOCUMENT_ROOT
+// Example: if this app lives at http://localhost/band_github/dbms_band, BASE_URL becomes "/band_github/dbms_band"
+$__doc_root = isset($_SERVER['DOCUMENT_ROOT']) ? realpath($_SERVER['DOCUMENT_ROOT']) : null;
+$__dir = realpath(__DIR__);
+if ($__doc_root && $__dir) {
+  $__doc_root = str_replace('\\', '/', $__doc_root);
+  $__dir = str_replace('\\', '/', $__dir);
+  $basePath = rtrim(str_replace($__doc_root, '', $__dir), '/');
+  if ($basePath === '') { $basePath = '/'; }
+  if ($basePath[0] !== '/') { $basePath = '/' . $basePath; }
+  define('BASE_URL', $basePath);
+} else {
+  // Fallback
+  define('BASE_URL', '');
+}
+
 // Role ID helpers: return existing id or create a new row bound to this user
 function get_or_create_manager_id($user_id) {
   global $pdo;
@@ -65,14 +81,14 @@ function current_user_role() {
 function require_role($roles) {
   $roles = (array)$roles;
   if (!in_array(current_user_role(), $roles, true)) {
-    header('Location: /band/pages/dashboard.php');
+    header('Location: ' . BASE_URL . '/pages/dashboard.php');
     exit;
   }
 }
 
 function require_login() {
   if (!is_logged_in()) {
-    header('Location: /band/pages/login.php');
+    header('Location: ' . BASE_URL . '/pages/login.php');
     exit;
   }
 }
@@ -88,7 +104,7 @@ function require_basic_profile() {
   $needs = (!$u || trim((string)$u['name']) === '' || trim((string)$u['email']) === '');
   if ($needs) {
     $msg = urlencode('Please fill your info in Profile before continuing.');
-    header('Location: /band/pages/profile.php?msg=' . $msg);
+    header('Location: ' . BASE_URL . '/pages/profile.php?msg=' . $msg);
     exit;
   }
 }

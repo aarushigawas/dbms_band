@@ -12,7 +12,7 @@ exit;
 <head>
   <meta charset="utf-8">
   <title>Band Management System</title>
-  <link rel="stylesheet" href="/band/style.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>/style.css">
 </head>
 <body>
   <main class="container">

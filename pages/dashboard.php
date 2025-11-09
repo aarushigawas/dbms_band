@@ -614,32 +614,32 @@ include __DIR__ . '/header.php';
       </div>
       
       <div class="quick-links-grid">
-        <a href="/band/pages/performances.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/performances.php" class="quick-link">
           <div class="link-icon">🎭</div>
           <div class="link-text">Manage Performances</div>
         </a>
         
-        <a href="/band/pages/band_request.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/band_request.php" class="quick-link">
           <div class="link-icon">🎸</div>
           <div class="link-text">View Bands</div>
         </a>
         
-        <a href="/band/pages/venue_requests.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/venue_requests.php" class="quick-link">
           <div class="link-icon">🏛️</div>
           <div class="link-text">Venue Requests</div>
         </a>
         
-        <a href="/band/pages/profile.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/profile.php" class="quick-link">
           <div class="link-icon">👤</div>
           <div class="link-text">Edit Profile</div>
         </a>
         
-        <a href="/band/pages/browse.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/browse.php" class="quick-link">
           <div class="link-icon">🔍</div>
           <div class="link-text">Browse Shows</div>
         </a>
         
-        <a href="/band/pages/bookings.php" class="quick-link">
+        <a href="<?= BASE_URL ?>/pages/bookings.php" class="quick-link">
           <div class="link-icon">📅</div>
           <div class="link-text">My Bookings</div>
         </a>

@@ -335,7 +335,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <span>Already have an account?</span>
       </div>
 
-      <button type="button" class="btn-login" onclick="window.location.href='/band/pages/login.php'">Login</button>
+      <button type="button" class="btn-login" onclick="window.location.href='<?= BASE_URL ?>/pages/login.php'">Login</button>
     </div>
 
     <div class="register-image-section">

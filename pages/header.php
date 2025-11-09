@@ -6,36 +6,36 @@ require_once __DIR__ . '/../config.php';
 <head>
   <meta charset="utf-8">
   <title>Band Management</title>
-  <link rel="stylesheet" href="/band/style.css">
-  <script src="/band/assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="<?= BASE_URL ?>/style.css">
+  <script src="<?= BASE_URL ?>/assets/js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/band/index.php">BandSync</a>
+      <a class="brand" href="<?= BASE_URL ?>/index.php">BandSync</a>
       <nav>
-        <a href="/band/pages/dashboard.php">Dashboard</a>
+        <a href="<?= BASE_URL ?>/pages/dashboard.php">Dashboard</a>
         <?php if (current_user_role()==='manager'): ?>
-          <a href="/band/pages/performances.php">Performances</a>
-          <a href="/band/pages/band_request.php">Bands</a>
-          <a href="/band/pages/bookings.php">Bookings</a>
-          <a href="/band/pages/received_reviews.php">Received Reviews</a>
+          <a href="<?= BASE_URL ?>/pages/performances.php">Performances</a>
+          <a href="<?= BASE_URL ?>/pages/band_request.php">Bands</a>
+          <a href="<?= BASE_URL ?>/pages/bookings.php">Bookings</a>
+          <a href="<?= BASE_URL ?>/pages/received_reviews.php">Received Reviews</a>
         <?php endif; ?>
         <?php if (current_user_role()==='venue_owner'): ?>
-          <a href="/band/pages/venues.php">My Venues</a>
-          <a href="/band/pages/venue_requests.php">Venue Requests</a>
-          <a href="/band/pages/received_reviews.php">Received Reviews</a>
+          <a href="<?= BASE_URL ?>/pages/venues.php">My Venues</a>
+          <a href="<?= BASE_URL ?>/pages/venue_requests.php">Venue Requests</a>
+          <a href="<?= BASE_URL ?>/pages/received_reviews.php">Received Reviews</a>
         <?php endif; ?>
         <?php if (current_user_role()==='general'): ?>
-          <a href="/band/pages/browse.php">Browse</a>
-          <a href="/band/pages/reviews.php">Reviews</a>
+          <a href="<?= BASE_URL ?>/pages/browse.php">Browse</a>
+          <a href="<?= BASE_URL ?>/pages/reviews.php">Reviews</a>
         <?php endif; ?>
-        <a href="/band/pages/profile.php">Profile</a>
+        <a href="<?= BASE_URL ?>/pages/profile.php">Profile</a>
         <?php if(is_logged_in()): ?>
-          <a href="/band/pages/logout.php">Logout</a>
+          <a href="<?= BASE_URL ?>/pages/logout.php">Logout</a>
         <?php else: ?>
-          <a href="/band/pages/login.php">Login</a>
-          <a href="/band/pages/register.php">Register</a>
+          <a href="<?= BASE_URL ?>/pages/login.php">Login</a>
+          <a href="<?= BASE_URL ?>/pages/register.php">Register</a>
         <?php endif; ?>
       </nav>
     </div>
