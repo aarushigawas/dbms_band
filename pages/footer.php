@@ -29,13 +29,17 @@
 
   <style>
     .site-footer {
-      background: rgba(215, 208, 163, 0.75);;
+      background: rgba(215, 208, 163, 0.75); /* solid white to avoid blending */
       color: #2B124C;
-      padding: 50px 20px 30px;
-      margin-top: 60px;
-      border-top: 4px solid rgba(191, 172, 226, 0.6);
-      box-shadow: 0 -8px 32px rgba(191, 172, 226, 0.3);
+      padding: 60px 20px 40px;
+      margin-top: 80px;
+      border-top: 6px solid rgba(160, 132, 202, 0.9);
+      box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 50; /* forces footer above background layers */
     }
+
+
 
     .footer-content {
       display: grid;
